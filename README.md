@@ -24,21 +24,12 @@ cd bloggeragent
 python3 -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+cp .env.example .env
 ```
 
-Create a `.env` file in the project root:
+Edit `.env` and set `GOOGLE_API_KEY`. Optionally change `MODEL` (default: `gemini-flash-latest`).
 
-```env
-GOOGLE_API_KEY=your_api_key_here
-```
-
-Optional — override the default model (`gemini-flash-latest`):
-
-```env
-MODEL=gemini-2.0-flash
-```
-
-Do not commit `.env` to version control.
+Do not commit `.env` to version control — only `.env.example` is tracked.
 
 ## Run
 
